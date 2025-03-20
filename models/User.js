@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const WalletSchema = new mongoose.Schema({
   currency_type: { type: String, required: true },
   wallet_address: { type: String, required: true, unique: true },
-  balance: { type: mongoose.Types.Decimal128, default: 0.0 },
+  balance: { type: Number, default: 0.0 },
 });
 
 const UserSchema = new mongoose.Schema({
